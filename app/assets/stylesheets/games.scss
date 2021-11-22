@@ -1,0 +1,19 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: 'center';
+}
+
+.card {
+  font-size: 40px;
+  padding: 0.2rem 0.2rem;
+  font-weight: 700;
+}
+
+.result {
+  padding: 1rem;
+  margin: 1rem;
+}

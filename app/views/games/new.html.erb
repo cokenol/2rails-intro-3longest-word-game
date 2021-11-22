@@ -1,0 +1,19 @@
+<h1>New game</h1>
+
+  <div class="cards">
+  <% @letters.each do |l| %>
+    <div class="card card-body text-center bg-primary text-white m-1"><%= l %></div>
+  <% end %>
+  </div>
+  <form action="/score" method="POST">
+    <%= hidden_field_tag 'start-time', @start_time%>
+    <%= hidden_field_tag 'letters', @letters.join %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label for="longest-word">What is the longest word you find?</label>
+    <div class="input-group mb-3">
+      <input type="text" name="longest-word" class="form-control" placeholder="longest word?" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <input type="submit" value="Play!" class="btn btn-outline-secondary" >
+      </div>
+    </div>
+</form>

@@ -1,0 +1,18 @@
+<h1>Longest word</h1>
+<div class="card card-body result text-center">
+<h2><%= @input.upcase %></h2>
+
+<h2><%= @error[:message] %></h2>
+<% if !@check.nil? %>
+  <h2>Your score: <%= @check[:score] %></h2>
+  <h2><%= @check[:message] %></h2>
+<% end %>
+</div>
+
+<div class="card card-body result text-center">
+  <h4>Total score: <%= @total_score.round(2) %></h4>
+  <h4>Total attempts: <%= @total_tries %></h4>
+  <h4>Average score: <%= (@total_score / @total_tries).round(2) %></h4>
+</div>
+
+<%= link_to "Play again", new_path , class:"btn btn-primary"%>
